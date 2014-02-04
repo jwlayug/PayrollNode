@@ -1,3 +1,3 @@
 ﻿'use strict';
 
-var payrollApp = angular.module('payrollApp', []);
+var payrollApp = angular.module('payrollApp', ['ngSanitize']);

@@ -1,21 +1,22 @@
 ﻿'use strict';
 
 payrollApp.controller('payrollController', 
-        function payrollController($scope) {
+        function payrollController($scope,payrollData) {
+            $scope.snippet = 'Sample Message';
+            $scope.account = payrollData.account;
 
-            $scope.account = {
-                user: [
-                    {   user_id: '1',
-                        username: 'jwlayug',
-                        password:'123'},
-                    {   user_id: '2',
-                        username: 'jwlayug2',
-                        password: '1232'}
 
-                ]
-            }
-         
-            
+
+
+            $scope.upVote = function (defaultname) {
+                defaultname.vote++;
+            };
+
+            $scope.downVote = function (defaultname) {
+                defaultname.vote--;
+            };
+
+
 
         }
     
